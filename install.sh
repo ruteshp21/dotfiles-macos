@@ -61,3 +61,7 @@ sudo xcode-select -switch /Applications/Xcode.app/Contents/Developer
 printf "💻  Set macOS preferences\n"
 ./macos/.macos
 
+printf "🐗  Stow dotfiles\n"
+stow alacritty colorls fzf git nvim skhd starship tmux vim yabai z zsh
+
+printf "✨  Done!\n"
