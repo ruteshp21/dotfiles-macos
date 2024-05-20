@@ -38,11 +38,6 @@ install_brew() {
 	brew bundle
 }
 
-install_app_store_apps() {
-	mas install 497799835 # Xcode
-	mas install 1509590766 # Mutekey
-}
-
 printf "🗄  Creating directories\n"
 create_dirs
 
@@ -52,16 +47,10 @@ build_xcode
 printf "🍺  Installing Homebrew packages\n"
 install_brew
 
-printf "🛍️  Installing Mac App Store apps\n"
-install_app_store_apps
-
-printf "🛠  Set Xcode path\n"
-sudo xcode-select -switch /Applications/Xcode.app/Contents/Developer
-
 printf "💻  Set macOS preferences\n"
-./macos/.macos
+#./macos/.macos
 
 printf "🐗  Stow dotfiles\n"
-stow alacritty colorls fzf git nvim skhd starship tmux vim yabai z zsh
+#stow alacritty colorls fzf git nvim skhd starship tmux vim yabai z zsh
 
 printf "✨  Done!\n"
