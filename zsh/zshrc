@@ -1,0 +1,47 @@
+### ---- autocompletions ---- ###
+autoload -Uz compinit && compinit
+
+### ---- completion options and styling ---- ###
+zstyle ':completion:*' menu select # selectable menu
+zstyle ':completion:*' matcher-list 'm:{[:lower:][:upper:]-_}={[:upper:][:lower:]_-}' 'r:|=*' 'l:|=* r:|=*' # case-insensitive completion
+zstyle ':completion:*' special-dirs true # complete . and .. special directories
+zstyle ':completion:*' list-colors '' # colorize completion lists
+zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#) ([0-9a-z-]#)*=01;34=0=01' # colorize kill list
+
+# uncomment to run zprof
+# zmodload zsh/prof
+
+# load the rest of the configs
+source $ZPLUG_HOME/init.zsh
+source $ZDOTDIR/aliases.zsh
+source $ZDOTDIR/history.zsh
+
+zplug "plugins/git", from:oh-my-zsh
+zplug "plugins/sudo", from:oh-my-zsh
+zplug "plugins/colored-man-pages", from:oh-my-zsh
+zplug "plugins/command-not-found", from:oh-my-zsh
+zplug "plugins/web-search", from:oh-my-zsh
+zplug "plugins/copydir", from:oh-my-zsh
+zplug "plugins/copyfile", from:oh-my-zsh
+zplug "plugins/copybuffer", from:oh-my-zsh
+zplug "plugins/dirhistory", from:oh-my-zsh
+zplug "plugins/osx", from:oh-my-zsh
+zplug "zsh-users/zsh-autosuggestions"
+zplug "zsh-users/zsh-syntax-highlighting"
+zplug "zsh-users/zsh-history-substring-search"
+zplug "MichaelAquilina/zsh-you-should-use"
+zplug load
+
+# bindkeys
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
+bindkey -s "^h" "history 1\n"
+bindkey -s "^l" "clear\n"
+bindkey -s "^d" "dlfile\n"
+
+# THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+# set starship prompt
+eval "$(starship init zsh)"
