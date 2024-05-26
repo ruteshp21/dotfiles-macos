@@ -3,7 +3,7 @@
 create_dirs() {
 	declare -a dirs=(
 		"$HOME/Downloads/torrents"
-		"$HOME/Desktop/Screenshots"
+		"$HOME/Pictures/Screenshots"
 		"$HOME/Codespace"
 	)
 
