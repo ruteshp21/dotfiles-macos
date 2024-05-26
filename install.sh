@@ -2,6 +2,9 @@
 
 create_dirs() {
 	declare -a dirs=(
+ 		"$HOME/.config"
+		"$HOME/.local"
+		"$HOME/.cache"
 		"$HOME/Downloads/torrents"
 		"$HOME/Pictures/Screenshots"
 		"$HOME/Codespace"
