@@ -113,7 +113,6 @@ cask "postman"
 # --- Terminal --- #
 cask "wezterm"
 cask "iterm2"
-cask "ghostty"
 
 # --- Git Viewer --- #
 cask "github"
