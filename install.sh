@@ -159,7 +159,7 @@ main() {
   install_rosetta
   install_brew
   install_java_tools
-  apply_macos_defaults
+  #apply_macos_defaults
   add_zsh_plugins
   stow_dotfiles
 
