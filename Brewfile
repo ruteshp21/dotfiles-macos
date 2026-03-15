@@ -26,7 +26,7 @@ brew "tldr"               # simplified man pages
 brew "tmux"
 brew "opencode"
 brew "xz"                 # compression
-brew "unrar"              # required for extract function (.rar)
+brew "unar"              # required for extract function (.rar)
 brew "sevenzip"           # required for extract function (.7z)
 brew "mas"                # Mac App Store CLI
 brew "pass"
@@ -38,7 +38,7 @@ brew "zsh-autosuggestions"
 brew "zsh-syntax-highlighting"
 brew "zsh-completions"
 brew "zsh-history-substring-search"
-brew "you-should-use"
+brew "zsh-you-should-use"
 brew "starship"
 
 # --- Dev utilities -----------------------------------------------------------
