@@ -94,15 +94,15 @@ install_java_tools() {
 
   if command -v sdk &>/dev/null; then
     sdk install java 17.0.18-amzn || true
-	  sdk install java 21.0.10-amzn || true
+	sdk install java 21.0.10-amzn || true
     sdk install java 25.0.2-amzn || true
     sdk install maven || true
     sdk install gradle || true
-	  sdk install activemq || true
-	  sdk install jmeter || true
-	  sdk install jmc || true
-	  sdk install springboot || true
-	  sdk install scala || true
+	sdk install activemq || true
+	sdk install jmeter || true
+	sdk install jmc || true
+	sdk install springboot || true
+	sdk install scala || true
   fi
   
 }
